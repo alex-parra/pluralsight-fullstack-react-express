@@ -1,0 +1,11 @@
+{
+  "name": "pluralsight-fullstack-react-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alex-parra/pluralsight-fullstack-react-express.git",
+  "author": "Alex Parra <alexpds@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.42.1"
+  }
+}
