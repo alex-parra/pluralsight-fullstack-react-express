@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useGroups from 'app/hooks/useGroups';
 import useTasks from 'app/hooks/useTasks';
-import { Link } from 'react-router-dom';
+import NewTask from 'app/components/NewTask';
 
 const Dashboard = () => {
   const groups = useGroups();
-  const tasks = useTasks();
+  const [tasks, addTask] = useTasks();
 
   return (
     <div>
@@ -19,6 +20,7 @@ const Dashboard = () => {
                 <Link to={`task/${t.id}`}>{t.name}</Link>
               </div>
             ))}
+          <NewTask group={g.id} onSubmit={addTask} />
         </div>
       ))}
     </div>

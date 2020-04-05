@@ -4,7 +4,7 @@ import useTasks from 'app/hooks/useTasks';
 
 const TaskDetail = () => {
   const { id } = useParams();
-  const task = useTasks(id);
+  const [task] = useTasks(id);
 
   return (
     <div>

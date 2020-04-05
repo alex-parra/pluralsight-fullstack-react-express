@@ -1,8 +1,8 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 import { reducer as users } from './users';
 import { reducer as groups } from './groups';
-import { reducer as tasks } from './tasks';
+import { reducer as tasks, middleware as tasksMiddleware } from './tasks';
 import { reducer as comments } from './comments';
 
 const rootReducer = combineReducers({
@@ -12,7 +12,10 @@ const rootReducer = combineReducers({
   comments,
 });
 
+const middlewares = [tasksMiddleware];
+
 export const initStore = (initialState = {}) => {
-  const store = createStore(rootReducer, initialState);
+  const store = createStore(rootReducer, initialState, applyMiddleware(...middlewares));
+
   return store;
 };
