@@ -5,13 +5,13 @@ export const defaultState = {
   ],
 
   groups: [
-    { id: 'G1', name: 'To Dos', owner: 'U1' },
-    { id: 'G2', name: 'To Dos', owner: 'U2' },
+    { id: 'G1', name: 'Work To Dos', owner: 'U1' },
+    { id: 'G2', name: 'Home To Dos', owner: 'U2' },
   ],
 
   tasks: [
     { id: 'T1', name: 'Add tests', group: 'G1', owner: 'U1', done: false },
-    { id: 'T2', name: 'Add tests', group: 'G2', owner: 'U2', done: false },
+    { id: 'T2', name: 'Fix lamp', group: 'G2', owner: 'U2', done: false },
   ],
 
   comments: [

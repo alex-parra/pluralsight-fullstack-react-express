@@ -1,19 +1,15 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import Dashboard from 'app/components/Dashboard';
+import TaskDetail from './TaskDetail';
 
 const App = () => {
-  const users = useSelector((state) => state.users);
-
   return (
-    <div>
-      {users.map((u) => {
-        return (
-          <div key={u.id} className="user">
-            {u.name}
-          </div>
-        );
-      })}
-    </div>
+    <Router>
+      <Route path="/" exact component={Dashboard} />
+      <Route path="/task/:id" component={TaskDetail} />
+    </Router>
   );
 };
 
