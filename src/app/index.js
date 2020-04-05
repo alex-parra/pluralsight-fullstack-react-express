@@ -1,7 +1,6 @@
-import { initStore } from './store';
-import { defaultState } from '../server/defaultState';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const store = initStore(defaultState);
+import Root from 'app/components/Root';
 
-console.info('Hello World!');
-console.info(store.getState());
+ReactDOM.render(<Root />, document.getElementById('root'));
